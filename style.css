@@ -1,0 +1,365 @@
+body{
+    margin: 0;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    position: relative;
+}
+
+span, pre{
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+nav {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    height: 60px;
+    align-items: center;
+    color: white;
+    z-index: 1;
+}
+.buttonbox{
+    display: flex;
+    flex-flow: row nowrap;
+}
+.buttonbox>*{
+    margin: 0 10px;
+    cursor: pointer;
+    transition: 0.6s ease;
+    color: white;
+}
+.buttonbox>*:hover{
+    color: #1b1b1b;
+}
+
+
+nav>div{
+    margin: 0 20px;
+}
+
+nav :first-child {
+    height: 95%;
+    object-fit: contain;
+}
+
+main {
+    height: 70vh;
+    background-image: linear-gradient(to right, #1b1b1b, #1b1b1b 50%, rgb(0, 166, 255) 50%,rgb(0, 166, 255));
+    width: 100%;
+    top: 0;
+    position: relative;
+    z-index: 0;
+    display: flex;
+    justify-content: center;
+}
+.usableArea{
+    width: 100%;
+    max-width: 900px;
+    background-color: #1b1b1b;
+    display: flex;
+}
+.left{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.titleArea {
+    font-size: 2rem;
+}
+.right {
+    width: 80%;
+    display: flex;
+    align-items: center;
+}
+.imageArea {
+    position: relative;
+    width: 100%;
+    display: flex;
+    height: 0;
+}
+
+.imageArea img {
+    width: 50%;
+    position: absolute;
+    border-radius: 100%;
+    min-width: 213px;
+}
+
+.imageArea :nth-child(1) {
+    top: -193px;
+    left: 20%;
+}
+
+.imageArea :nth-child(2) {
+    top: -50px;
+    left: 45%;
+}
+.imageArea :nth-child(3) {
+    top: 45%;
+    left: 8%;
+}
+
+.buttonArea>.button {
+    background: rgb(0, 166, 255);
+    color: #1b1b1b;
+    display: flex;
+    justify-content: center;
+    width: 100px;
+    height: 26px;
+    align-items: center;
+    FONT-SIZE: 0.9REM;
+    cursor: pointer;
+}
+
+.buttonArea>.button>span{
+    color: white;
+}
+
+.buttonArea, .titleArea {
+    margin-top: 30px;
+    margin-left: 15px;
+}
+.searchArea {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: -10px;
+    z-index: 1;
+    position: sticky;
+    top: 20px;
+}
+
+.parametriBox {
+    /* max-width: 750px; */
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    height: 60px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    /* width: 80%; */
+    box-shadow: 0px 1px 5px 0px #0000004a;
+}
+
+.parametriBox>.button {
+    width: 80px;
+    background-color: rgb(0, 166, 255);
+    color: 1b1b1b;
+    display: flex;
+    justify-content: center;
+    height: 27px;
+    align-items: center;
+    margin-left: 5px;
+    cursor: pointer;
+    font-size: 0.9REM;
+}
+
+.parametriBox>.button>span{
+    color: rgb(255, 255, 255);
+}
+
+input {
+    background: rgb(247 247 247);
+    border: #cfcfcf solid 1px;
+    height: 24px;
+    font-variant-caps: all-petite-caps;
+    text-align: center;
+}
+
+.parametriBox :first-child{
+    margin-left: 20px;
+}
+
+.parametriBox :last-child{
+    margin-right: 20px;
+}
+
+#resultBox span{
+    color: rgb(0, 0, 0);
+}
+#resultBox {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+#resultBox>ul>li {
+    display: flex;
+    border-bottom: solid 3px #ffffff;
+    width: 100%;
+    padding: 7.5px 0px 7.5px 0px;
+}
+
+#resultBox>ul :last-child{
+    border-bottom: solid 0px #00000029;
+
+}
+
+
+#resultBox>ul>li :last-child {
+    padding: 0px 10px;
+    width: 30%;
+}
+#resultBox>ul>li :first-child{
+    padding-left: 20px;
+    width: 70%;
+}
+
+#resultBox>ul>li span{
+
+}
+
+ul {
+    padding: 0;
+    width: 100%;
+    max-width: 800px;
+    margin-left: 20px;
+    margin-right: 20px;
+    z-index: -2;
+    background: #eff3f5;
+    border-radius: 5px;
+}
+
+.title>span{
+    color: #1b1b1b;
+}
+
+section{
+    margin: 30px 0px;
+}
+
+.reccomended>.title{
+    text-align: center;
+    font-size: 1.4rem;
+}
+
+.reccomended>.prompt{
+    text-align: center;
+    margin-top: 5px;
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+.prompt>span{
+    color:rgb(0, 166, 255);
+
+}
+.filter{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 35px 0px;
+}
+.filter div{
+    margin: 0px 20px;
+    border-radius: 15px;
+}
+
+.lavoriFilt{
+    background-color: #1b1b1b;
+}
+
+.locationFilt{
+    background-color: rgb(0, 166, 255) ;
+}
+
+.filter div>span {
+    display: block;
+    color: white;
+    padding: 5px 15px;
+}
+
+.preCard {
+    height: 210px;
+    width: 160px;
+    background-color: #1b1b1b;
+    border-radius: 20px;
+    margin: 8px 30px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.4s ease;
+    position: relative;
+    box-shadow: 0px 1px 5px 0px #0000004a;
+}
+.preCard:hover {
+    background-color: rgb(0, 166, 255);
+}
+
+
+.preCard>span {
+    text-align: center;
+    font-size: 1.4rem;
+}
+.preCard :last-child{
+    position: absolute;
+    bottom: 12px;
+    color: rgb(0, 166, 255);
+    font-size: 0.8rem;
+    transition: 0.3s ease;
+}
+
+.preCard:hover :last-child{
+    color: #1b1b1b;
+}
+
+.preCard :nth-child(2){
+    pointer-events: none;
+    font-size: 0.8rem;
+}
+
+.preCard :last-child:hover{
+    color: white;
+
+}
+
+.preLine{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin-top: 15px;
+    width: 50%;
+}
+.reccomended{
+    display: flex;
+    flex-direction: column;
+}
+
+.filter div{
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+.topBack {
+    width: 100%;
+    height: 60px;
+    position: fixed;
+    top: 0;
+    z-index: -1;
+    background: rgb(0, 166, 255);
+}
+
+footer {
+    height: 80px;
+    background-color: rgb(0, 166, 255);
+    margin-top: 80px;
+}
+
+.lineArea{
+    width: 200%;
+    display: flex;
+    left: -100%;
+    position: relative;
+    transition: 0.5s ease;
+}
+
+.reccomended{
+    overflow-x: hidden;
+}
